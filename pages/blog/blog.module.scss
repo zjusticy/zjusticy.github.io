@@ -1,0 +1,30 @@
+.postList {
+	list-style: none;
+}
+
+.isLeft {
+    display: flex;
+    justify-content: flex-start;   
+}
+
+.imgMargin {
+    margin-right: 0.875rem;
+}
+
+.titlePadding {
+	font-size: 2rem;
+    margin: 3rem 0 .5rem;
+    font-weight: 700;
+    line-height: 1.125;
+}
+
+.date {
+	color: #7d7d7d;
+    font-size: .875rem;
+}
+
+.description {
+	font-size: 1rem;
+    margin: .5rem 0 0;
+    color: rgba(0,0,0,0.6);
+}

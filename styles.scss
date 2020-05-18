@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+// // Set your brand colors
+// $purple: #8a4d76;
+// $pink: #fa7c91;
+// $brown: #757763;
+// $beige-light: #d0d1cd;
+// $beige-lighter: #eff0eb;
+
+// Update Bulma's global variables
+$gap: 32px;
+
+$title-weight: 700;
+$subtitle-weight: 400;
+
+$body-color: #272727;
+$body-font-size: 1.25rem;
+$body-line-height: 1.8;
+
+$hero-body-padding-medium: 8rem 1.5rem;
+
+$widescreen: 1080px + (2 * $gap);
+
+$fullhd-enabled: false;
+$family-sans-serif: 'Inter', sans-serif;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+// $primary: $purple;
+// $link: $pink;
+// $widescreen-enabled: false;
+// $fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+// $body-background-color: $beige-lighter;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
+$navbar-background-color: transparent;
+$navbar-padding-horizontal: 4rem;
+
+
+
+// Import only what you need from Bulma
+@import './node_modules/bulma/sass/utilities/_all.sass';
+@import './node_modules/bulma/sass/base/_all.sass';
+@import './node_modules/bulma/sass/elements/button.sass';
+@import './node_modules/bulma/sass/elements/container.sass';
+@import './node_modules/bulma/sass/elements/content.sass';
+@import './node_modules/bulma/sass/elements/title.sass';
+@import './node_modules/bulma/sass/elements/image.sass';
+@import './node_modules/bulma/sass/components/navbar.sass';
+@import './node_modules/bulma/sass/components/level.sass';
+@import './node_modules/bulma/sass/components/breadcrumb.sass';
+@import './node_modules/bulma/sass/layout/hero.sass';
+@import './node_modules/bulma/sass/grid/columns.sass';
+
+// @import "~bulma/bulma.sass";
+
+
+
+
+.is-backgrd {
+  background-color: #8ba3af;
+}
+
+.isBlog {
+
+	margin: 0 auto;
+	max-width: 42rem;
+	padding: 3rem 1.3125rem;
+}
+
+.eleRound {
+	border-radius: 50%;
+}
+
+.smallerFont {
+	font-size: 1rem;
+}
+
+.bodyColor {
+	color: $body-color;
+}
+
+.is-2p5 {
+	font-size: 2.5rem;
+}
+
+
+// If need, change your variables before importing Bulma
+// $title-color: #ff0000;
+// @import "~bulma/bulma.sass";
