@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import styles from './layout.module.scss';
 import Link from 'next/link';
 import House from '../content/assets/icons/house'
@@ -10,6 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Layout(props) {
 
     const router = useRouter()
+
+    const [ menuActive, setMenuState ] = useState(false);
 
     const myClasses = (path, pwd) => {
         
@@ -34,14 +38,19 @@ export default function Layout(props) {
                 <a className="navbar-item"><House /></a>
               </Link>
 
-              <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <a role="button" 
+                className="navbar-burger"
+                aria-label="menu" 
+                aria-expanded="false" 
+                data-target="navbarBasicExample"
+                onClick={() => setMenuState(!menuActive)} >
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
               </a>
             </div>
 
-            <div id="navbarBasicExample" className="navbar-menu">
+            <div id="navbarBasicExample" className={menuActive ? `navbar-menu is-active` : `navbar-menu`}>
               <div className="navbar-end">
                 <Link  href="/">
                   <a className={myClasses(router.pathname, new RegExp('^\/$'))}>Home</a> 
@@ -64,8 +73,7 @@ export default function Layout(props) {
         <footer className={`${styles.myFooter}`}>
           <div className="container">
             <div>
-                Email me: 
-                {`  `}
+                Email me: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <FontAwesomeIcon icon={faEnvelope} />
                 {` `}
                 <a href="mailto:tzhu618@gmail.com">tzhu618@gmail.com</a>

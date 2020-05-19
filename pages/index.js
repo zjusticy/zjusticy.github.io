@@ -26,7 +26,7 @@ export default function Home() {
             <h3 className="subtitle is-4 has-text-white">
               Stay positive 💪
             </h3>
-            <div className={`columns ${styles.isRight}`}>
+            <div className={`${styles.iconFlex} ${styles.isRight}`}>
               <div className={styles.icons}>
                 <a href="https://github.com/zjusticy" className={styles.iconLink}>
                   <FontAwesomeIcon icon={faGithub} size="2x" />  
