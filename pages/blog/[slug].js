@@ -1,17 +1,18 @@
 import * as React from 'react'
 import matter from 'gray-matter'
-import { withRouter } from 'next/router';
+// import { withRouter } from 'next/router';
 // import { Converter } from 'showdown';
 // const glob = require('glob')
-import marked from 'marked';
 import path from "path";
 import Link from 'next/link';
 
-import fs from 'fs';
+import ReactMarkdown from 'react-markdown';
 
-import Layout from '../../components/layout'
+import Layout from '../../components/layout';
+import CodeBlock from '../../components/codeBlock';
 
-import { getAllPosts, getPostBySlug } from '../../utils/getLocalData'
+import { getAllPosts, getPostBySlug } from '../../utils/getLocalData';
+import { dateTrans } from '../../utils/smallTools';
 
 // export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
 function BlogTemplate({ post  }) {
@@ -43,10 +44,23 @@ function BlogTemplate({ post  }) {
 
         <article>
           <h1 className="title is-2p5">{post.title}</h1>
+          <span className={`dateStyle-2`}>{dateTrans(post.date)}</span>
+          <div className="content">
+             <ReactMarkdown
+                source={post.content}
+                renderers={{ code: CodeBlock }}
+            />           
+
+
+          </div>
+
    
-          <div className="content" dangerouslySetInnerHTML={{ __html: post.content }} />             
+          {/*<div className="content" dangerouslySetInnerHTML={{ __html: post.content }} />  */ }         
         </article>
     
+        <Link href="/blog">
+          <div className="marginTop-2"><a>← Blog</a></div>
+        </Link>
 
       </div>
 
@@ -68,7 +82,7 @@ export async function getStaticPaths() {
   //   },
   // }));
 
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(['slug'], "posts")
 
   const paths = posts.map((post) => ({
       params: {
@@ -98,15 +112,21 @@ export async function getStaticProps ({ params }) {
     'date',
     'slug',
     'content',
-  ])
+  ], "posts")
  
-  const content = marked(post.content || '').toString();
+  // const result = await remark()
+  //   .use(html)
+  //   .use(highlight)
+  //   .process(post.content || '')
+
+
+  // const content = result.toString();
 
   return {
     props: {
       post: {
         ...post,
-        content,
+        // content,
       },
     },
   }

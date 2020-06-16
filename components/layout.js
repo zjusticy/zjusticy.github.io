@@ -19,7 +19,7 @@ export default function Layout(props) {
         
 
 
-        if (path.match(pwd)) {
+        if (pwd.test(path)) {
             return `navbar-item ${styles.moreMargin} ${styles.addBorder}`;
         }
         else {
@@ -53,15 +53,15 @@ export default function Layout(props) {
             <div id="navbarBasicExample" className={menuActive ? `navbar-menu is-active` : `navbar-menu`}>
               <div className="navbar-end">
                 <Link  href="/">
-                  <a className={myClasses(router.pathname, new RegExp('^\/$'))}>Home</a> 
+                  <a className={myClasses(router.pathname, /^\/$/)}>Home</a> 
                 </Link>
 
                 <Link  href="/blog">
-                  <a className={myClasses(router.pathname, new RegExp('^\/blog'))}>Blog</a>
+                  <a className={myClasses(router.pathname, /^\/blog/)}>Blog</a>
                 </Link>
 
                 <Link  href="/about">
-                  <a className={myClasses(router.pathname, new RegExp('^\/about$'))}>About</a>
+                  <a className={myClasses(router.pathname, /^\/about$/)}>About</a>
                 </Link>
               </div>
 

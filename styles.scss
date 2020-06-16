@@ -71,6 +71,18 @@ $navbar-padding-horizontal: 4rem;
 	margin: 0 auto;
 	max-width: 682px;
 	padding: 3rem 1.3125rem;
+
+	& .dateStyle-2 {
+	  margin-bottom: 3rem;
+	}
+
+	& .title {
+		margin-bottom: 0.5rem;
+	}
+
+	& article li a {
+      word-wrap: break-word;
+	}
 }
 
 .eleRound {
@@ -88,6 +100,27 @@ $navbar-padding-horizontal: 4rem;
 .is-2p5 {
 	font-size: 2.5rem;
 }
+
+@mixin dateStyle {
+	display: block;
+	color: #7d7d7d;
+}
+
+.dateStyle-1 {
+	@include dateStyle;
+    font-size: .875rem;
+    margin-bottom: 1.25rem;
+}
+
+.dateStyle-2 {
+	@include dateStyle;
+    font-size: 1rem;
+}
+
+.marginTop-2{
+	margin-top: 2rem;
+}
+
 
 
 // If need, change your variables before importing Bulma

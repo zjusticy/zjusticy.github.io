@@ -35,7 +35,7 @@ export default function Services({ allPosts }) {
                               <a>{post.title}</a>
                             </h2>
                           </Link>
-                          <span className={`${styles.date}`}>{dateTrans(post.date)}</span>
+                          <span className={`dateStyle-1`}>{dateTrans(post.date)}</span>
                           <p className={`${styles.description}`}>{post.description}</p>
                         </li>
                       ))}
@@ -55,7 +55,7 @@ export async function getStaticProps() {
     'date',
     'description',
     'slug',
-  ])
+  ], "posts")
 
   return {
     props: { allPosts },

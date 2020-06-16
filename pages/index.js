@@ -44,12 +44,12 @@ export default function Home() {
       </div>
 
       <div className={`container ${styles.extraSpace}`}>
-        <div className="columns">
+        <div className={`columns ${styles.columnLayout}`}>
           <div className="column is-4">
             <Portrait className={`${styles.imgLayout}`}/>
           </div>          
 
-          <div className="column is-8 is-5-widescreen is-offset-2-widescreen">
+          <div className="column is-8 is-6-widescreen is-offset-2-widescreen">
             <div className="content">
               <h1>About him</h1>
               <p>Tong is a web developer with passion and energy. Ocasionlly, He uses blogs to record his ideas and his thoughts.</p>

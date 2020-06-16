@@ -1,0 +1,21 @@
+
+
+.extraSpace {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+.columnAlign {
+	justify-content: space-between;
+
+	& .addPadding {
+		padding-right: 1rem;
+	}
+
+	& section a {
+		word-wrap: break-word;
+	}
+}
+
+
+

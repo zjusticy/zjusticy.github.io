@@ -4,6 +4,8 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { GA_TRACKING_ID } from '../utils/gtag'
 import {DEFAULT_SEO} from '../config'
 
+
+
 export default class MyDocument extends Document {
   render() {
     return (
@@ -26,7 +28,6 @@ export default class MyDocument extends Document {
           `,
             }}
           />
-          <title key="title">{DEFAULT_SEO.title}</title>
           <meta
             key="description"
             name="description"

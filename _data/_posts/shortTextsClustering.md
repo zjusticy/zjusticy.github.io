@@ -1,7 +1,7 @@
 ---
 title: A novel method for short text clustering by using word2vec and cosine similarity
 date: "2019-10-26T22:40:32.169Z"
-description: A novel method for short text clustering by using Word2vec and cosine similarity
+description: An efficient process for unsupervised clustering the short texts
 ---
 
 [github link](https://github.com/Tong-Zhu/shortTextsClustering)
