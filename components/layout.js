@@ -53,15 +53,15 @@ export default function Layout(props) {
             <div id="navbarBasicExample" className={menuActive ? `navbar-menu is-active` : `navbar-menu`}>
               <div className="navbar-end">
                 <Link  href="/">
-                  <a className={myClasses(router.pathname, /^\/$/)}>Home</a> 
+                  <a className={myClasses(router.pathname, /^\/$/)} aria-label="Home page">Home</a> 
                 </Link>
 
                 <Link  href="/blog">
-                  <a className={myClasses(router.pathname, /^\/blog/)}>Blog</a>
+                  <a className={myClasses(router.pathname, /^\/blog/)} aria-label="Blog page">Blog</a>
                 </Link>
 
                 <Link  href="/about">
-                  <a className={myClasses(router.pathname, /^\/about$/)}>About</a>
+                  <a className={myClasses(router.pathname, /^\/about$/)} aria-label="About the author">About</a>
                 </Link>
               </div>
 
