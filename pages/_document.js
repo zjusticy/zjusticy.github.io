@@ -1,16 +1,15 @@
-import React from 'react'
-import Document, { Head, Main, NextScript } from 'next/document'
+import React from "react";
+import Document, { Head, Main, NextScript } from "next/document";
 
-import { GA_TRACKING_ID } from '../utils/gtag'
-import {DEFAULT_SEO} from '../config'
-
-
+import { GA_TRACKING_ID } from "../utils/gtag";
+import { DEFAULT_SEO } from "../config";
 
 export default class MyDocument extends Document {
   render() {
     return (
       <html>
         <Head>
+          <link rel="icon" type="image/png" href="/favicon.png" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
@@ -39,6 +38,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </html>
-    )
+    );
   }
 }

@@ -1,17 +1,24 @@
 export function dateTrans(dateString) {
+	const en_mon_arr = [
+		"Jan",
+		"Feb",
+		"Mar",
+		"Apr",
+		"May",
+		"Jun",
+		"Jul",
+		"Aug",
+		"Spt",
+		"Oct",
+		"Nov",
+		"Dec",
+	];
 
+	const newString = dateString.split("-");
 
-  const en_mon_arr = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Spt","Oct","Nov","Dec"];
+	const re = /(.*?)T/;
 
-  const newString = dateString.split('-');
+	const day = re.exec(newString[2]);
 
-  
-
-  const re = /(.*?)T/;
-
-  const day = re.exec(newString[2]);
-
-  return `${day[1]} ${en_mon_arr[parseInt(newString[1])+1]}, ${newString[0]}`;
-
-
+	return `${day[1]} ${en_mon_arr[parseInt(newString[1]) + 1]}, ${newString[0]}`;
 }

@@ -1,13 +1,13 @@
-import Head from 'next/head'
-import styles from './index.module.scss';
-import Link from 'next/link';
+import Head from "next/head";
+import styles from "./index.module.scss";
+import Link from "next/link";
 
-import Layout from '../components/layout';
-import Portrait from '../content/assets/imgs/portrait'
+import Layout from "../components/layout";
+import Portrait from "../content/assets/imgs/portrait";
 
-import Linkedin from '../content/assets/icons/linkedin'
+import Linkedin from "../content/assets/icons/linkedin";
 
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
@@ -16,27 +16,26 @@ export default function Home() {
       <div className="hero is-medium is-backgrd">
         <div className={`hero-body ${styles.lessPadding}`}>
           <div className="container">
-            <h1 className="title is-1 is-spaced has-text-white">
-              Tong's Site
-            </h1> 
+            <h1 className="title is-1 is-spaced has-text-white">Tong's Site</h1>
             <h2 className={`subtitle is-3 has-text-white ${styles.btmSpace}`}>
               Try to be a web developer
             </h2>
             <div className={styles.vDivider}></div>
-            <h3 className="subtitle is-4 has-text-white">
-              Stay positive 💪
-            </h3>
+            <h3 className="subtitle is-4 has-text-white">Stay positive 💪</h3>
             <div className={`${styles.iconFlex} ${styles.isRight}`}>
               <div className={styles.icons}>
-                <a href="https://github.com/zjusticy" className={styles.iconLink}>
-                  <FontAwesomeIcon icon={faGithub} size="2x" />  
-                </a>                
+                <a
+                  href="https://github.com/zjusticy"
+                  className={styles.iconLink}
+                >
+                  <FontAwesomeIcon icon={faGithub} size="2x" />
+                </a>
               </div>
 
               <div className={styles.icons}>
                 <a href="#" className={styles.iconLink}>
-                  <Linkedin  width="42" />  
-                </a>                
+                  <Linkedin width="42" />
+                </a>
               </div>
             </div>
           </div>
@@ -46,29 +45,36 @@ export default function Home() {
       <div className={`container ${styles.extraSpace}`}>
         <div className={`columns ${styles.columnLayout}`}>
           <div className="column is-4">
-            <Portrait className={`${styles.imgLayout}`}/>
-          </div>          
+            <Portrait className={`${styles.imgLayout}`} />
+          </div>
 
           <div className="column is-8 is-6-widescreen is-offset-2-widescreen">
             <div className="content">
               <h1>About him</h1>
-              <p>Tong is a web developer with passion and energy. Ocasionlly, He uses blogs to record his ideas and his thoughts.</p>
-              <p className={styles.btmSpace2}>His mind is full of thoughts. And to be a web developer is a great to fulfill his ideas. Simple, elegent and functional design is the goal he wants to achieve.
-                React is now the best choice for him to build web applications. </p>
+              <p>
+                Tong is a web developer with passion and energy. Ocasionlly, He
+                uses blogs to record his ideas and his thoughts.
+              </p>
+              <p className={styles.btmSpace2}>
+                His mind is full of thoughts. And to be a web developer is a
+                great to fulfill his ideas. Simple, elegent and functional
+                design is the goal he wants to achieve. React is now the best
+                choice for him to build web applications.{" "}
+              </p>
               <button className="button is-normal">
                 <Link href="/about">
-                  <a className="bodyColor">learn more</a>
+                  <a
+                    className="bodyColor"
+                    aria-label="Learn more about the author"
+                  >
+                    learn more
+                  </a>
                 </Link>
               </button>
             </div>
           </div>
-
         </div>
-
       </div>
-
-
-
     </Layout>
-  )
+  );
 }
